@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% block title %}Расширенная инфа{% endblock %}
+{% block content %}
+    <div class="all">
+        <form method="post">
+            {{ article.news_text }}
+            {{ article.date }}
+        </form>
+        <a href="{% url 'news_update' article.id %}" type="submit" class="btn btn-primary">Изменить</a>
+        <a href="{% url 'news_delete' article.id %}" type="submit" class="btn btn-warning">Удалить!</a>
+    </div>
+{% endblock %}

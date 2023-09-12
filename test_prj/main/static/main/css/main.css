@@ -1,0 +1,63 @@
+body {
+    background: #ff9e47;
+}
+
+
+aside {
+    float: left;
+    background: #0c00ff;
+    width: 20%;
+    padding: 3%;
+    height: 100vh;
+    color: #ffcf6e;
+    border-right: 3px solid mistyrose;
+}
+
+
+ul {
+    font-size: 20px;
+    list-style: None;
+    float: left;
+}
+
+
+li {
+    color: lightcoral;
+    display: block;
+    margin-top: 20px;
+    transition: transform 3s ease;
+}
+
+
+li :hover, a :hover {
+    color: #eb5959;
+    transform: scale(1.10);
+    text-decoration: None;
+}
+
+
+main .all {
+    float: left;
+    color: #000000;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .all h1 {
+    font-size: 50px;
+}
+
+
+main .all button {margin-bottom: 20px}
+
+
+img {
+    float: left;
+    width: 200px;
+}
+
+
+h3 {
+    font-size: 35px;
+}

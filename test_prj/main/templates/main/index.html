@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="all">
+        <h1>Главная страница</h1>
+        <p>Текст под главной страницей</p>
+        <button type="button" class="btn btn-danger">PrASS</button>
+        {% filter upper %}
+            {% for val in values %}
+                <p>{{ val }}</p>
+            {% endfor %}
+            <h3>*пробел*</h3>
+            {% for val in person_obj %}
+                <p>{{ val }}</p>
+            {% endfor %}
+        {% endfilter %}
+    </div>
+{% include 'main/test_html.html' %}
+{% endblock %}

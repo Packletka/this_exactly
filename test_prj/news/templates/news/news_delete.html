@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+{% block title %}Форма по удалению статьи{% endblock %}
+{% block content %}
+    <div class="all">
+        <h1>Вы точно хотите удалить эту новость?</h1>
+        <h4>Подумайте)</h4><br>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Всё, точно удалить</button>
+        </form>
+        <a href="{% url 'detail_view' article.id %}">
+            <button type="submit" class="btn btn-info">Вернуться назад на новость</button>
+        </a>
+    </div>
+{% endblock %}

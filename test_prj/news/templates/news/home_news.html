@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% block title %}Домашняя{% endblock %}
+{% block content %}
+    <div class="all">
+        <h1>Новости не про нас</h1>
+        <p>Текст ниже страницы новостей</p>
+        <button class="btn btn-outline-secondary">Press качат</button>
+        {% for new in news %}
+        <div class="alert alert-warning">
+            <h3>{{ new.title }}</h3>
+            <p>
+                {{ new.anons }}
+            </p>
+            <a href="{% url 'detail_view' new.id %}">
+                <button type="submit" class="btn btn-info">Просмотреть новость</button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% include 'main/test_html.html' %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+{% block title %}Форма по добавлению статьи{% endblock %}
+{% block content %}
+    <div class="all">
+        <h1>Форма добавления статьи</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.anons }}
+        {{ form.news_text }}
+        {{ form.date }}
+        <button type="submit" class="btn btn-danger">Создать новость</button>
+    </form>
+    </div>
+{% endblock %}
