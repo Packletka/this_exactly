@@ -7,6 +7,7 @@ class Articles(models.Model):
     anons = models.CharField('Дисклеймер', max_length=250)  # Хз, типо краткого содержания
     news_text = models.TextField('Сам текст')  # Текст самого сайта
     date = models.DateTimeField('Дата публикации')  # Время и дата, когда новости появились
+    image = models.ImageField(upload_to='articles_image', null=True, blank=True)
 
     def __str__(self):
         return self.title

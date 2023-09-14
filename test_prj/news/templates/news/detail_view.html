@@ -6,6 +6,7 @@
             {{ article.news_text }}
             {{ article.date }}
         </form>
+        <img src="{{ article.image.url }}" alt="">
         <a href="{% url 'news_update' article.id %}" type="submit" class="btn btn-primary">Изменить</a>
         <a href="{% url 'news_delete' article.id %}" type="submit" class="btn btn-warning">Удалить!</a>
     </div>
